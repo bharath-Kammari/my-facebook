@@ -110,11 +110,11 @@ function InputBox() {
         </div>
         <Popup
           trigger={open => (
-            <div className="item">
+            <div className="item hidden sm:flex">
 
 
 
-              <InputButton Icon={TagFacesIcon} title="Feeling/activity" color="#f7b928" />
+              <InputButton  Icon={TagFacesIcon} title="Feeling/activity" color="#f7b928" />
 
             </div>
 

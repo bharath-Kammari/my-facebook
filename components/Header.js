@@ -52,7 +52,11 @@ function Header({ setHomePageState, setProfileState, setHomeOtherUser, setSideBa
       <div className="left flex relative flex-col w-1/4">
         <div className="subLeft flex items-center">
 
-          <img className='h-11 w-11 mr-2' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="" />
+          <img onClick={()=>{
+            setHomePageState({HomeState:"Home"});
+          }
+          }
+            className='h-11 w-11 mr-2 cursor-pointer' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="" />
           <div className="searchField flex-grow">
 
 
@@ -77,6 +81,7 @@ function Header({ setHomePageState, setProfileState, setHomeOtherUser, setSideBa
 
       <div className="middle hidden  lg:flex w-1/2 space-x-2">
         <HeaderOption title="Home" setHomePageState={setHomePageState} Icon={HomeIcon} active={true}></HeaderOption>
+        
         <HeaderOption Icon={OndemandVideoIcon}></HeaderOption>
         <HeaderOption Icon={StorefrontIcon}></HeaderOption>
         <HeaderOption Icon={GroupsIcon}></HeaderOption>
@@ -98,7 +103,7 @@ function Header({ setHomePageState, setProfileState, setHomeOtherUser, setSideBa
         <div className="flex space-x-1 items-center">
 
           <Avatar className="cursor-pointer" onClick={signOut} src={session.user.image}></Avatar>
-          <h1 className='font-semibold max-w-min overflow-ellipsis'>{session.user.name}</h1>
+          <h1 className='font-semibold max-w-min hidden sm:flex overflow-ellipsis'>{session.user.name}</h1>
         </div>
       </div>
     </div>

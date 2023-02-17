@@ -193,7 +193,7 @@ function Profile({ profileState, currID, currName, currImage }) {
     <div className='bg-[#f0f2f5]'>
       {/* <h1>{currID}</h1> */}
       <div className='flex justify-around shadow-md bg-white'>
-        <div className="wrapper w-3/4 min-w-min lg:min-w-fit flex flex-col items-center lg:items-start bg-white">
+        <div className="wrapper w-[90%] sm:w-3/4  flex flex-col items-center lg:items-start bg-white">
 
           <div className="coverPhoto relative w-full h-96 bg-gradient-to-t from-[#5d5d5e] via-[#f0f2f5] to-[#f0f2f5] rounded-lg   ">
             {/* <img src={currImage} className="object-cover h-96 w-full rounded-lg" /> */}

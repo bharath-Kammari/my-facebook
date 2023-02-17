@@ -75,7 +75,12 @@ function HomePage() {
     }
   }, [])
   useEffect(()=>{
+    if(state.HomeState!="Home")return;
     if(sideBarState){
+      // while(!sideBarState.current){
+
+      // }
+      
       sideBarRef.current.classList.remove("hidden");
       sideBarRef.current.classList.add("w-[100%]")
       feedRef.current.classList.add("hidden");
@@ -88,6 +93,9 @@ function HomePage() {
       widgetsRef.current.classList.add("lg:hidden");
   }
   else{
+    // while(!sideBarState.current){
+        
+    // }
     sideBarRef.current.classList.add("hidden");
     sideBarRef.current.classList.remove("w-[100%]")
     feedRef.current.classList.remove("hidden");
@@ -121,7 +129,7 @@ function HomePage() {
 
               <SideBar setHomePageState={setState} />
             </div>
-            <div ref={feedRef} className="feed flex w-[80%] min-w-[460px] md:w-[60%]  lg:w-[45%]">
+            <div ref={feedRef} className="feed flex w-[90%] min-w-[280px] md:w-[60%]  lg:w-[45%]">
 
               <Feed setProfileState={setProfileState} setHomeOtherUser={setOtherUID} setHomePageState={setState}></Feed>
             </div>
@@ -153,6 +161,7 @@ function HomePage() {
 
         <FriendsRequests setHomePageState={setState} />
       )}
+      
 
 
     </div>
